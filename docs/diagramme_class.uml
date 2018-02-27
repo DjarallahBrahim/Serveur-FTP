@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="131.0" y="148.0">car.tp1.ftp.Param</node>
+    <node x="0.0" y="74.0">car.tp1.ftp.FtpRequest</node>
+    <node x="169.0" y="0.0">car.tp1.ftp.CmdControleur</node>
+    <node x="0.0" y="222.0">car.tp1.ftp.Users</node>
+    <node x="0.0" y="0.0">car.tp1.ftp.ServerMessage</node>
+    <node x="121.0" y="222.0">car.tp1.ftp.Cmds</node>
+    <node x="149.0" y="74.0">car.tp1.ftp.CodeCmd</node>
+    <node x="0.0" y="148.0">car.tp1.ftp.Serveur</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.1" x="382.87878787878776" y="290.3939393939393" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
