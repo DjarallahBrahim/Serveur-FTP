@@ -2,7 +2,6 @@ package car.tp1.ftp;
 
 import java.io.IOException;
 import java.util.Arrays;
-
 /**
  * Class CmdControleur :
  * This class receives messages from class FtpRequest
