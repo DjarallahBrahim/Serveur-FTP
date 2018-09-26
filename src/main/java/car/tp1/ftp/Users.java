@@ -18,7 +18,7 @@ public class Users {
      * The path of the file which contains the informations (username + password) of all the clients
      * (format : user1;pass1;user2;pass2;user3;pass3;...)
      */
-    private String pathUserInfo = "/home/samlillett/master1s2/CAR/gitlab/car-tp1-lamoot-djarallah/car-tp1/users.txt";
+    private String pathUserInfo = "users.txt";
 
     /**
      * Contains the line of the file
