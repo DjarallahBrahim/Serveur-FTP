@@ -1,6 +1,10 @@
 language: java
-jdk:
-  - oraclejdk8
-  - oraclejdk9
-  - openjdk8
-script: mvn clean install
+
+addons:
+  sonarcloud:
+    organization: "djarallahbrahim-github" # the key of the org you chose at step #3
+   
+script:
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
+  - mvn clean install
