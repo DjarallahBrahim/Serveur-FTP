@@ -82,22 +82,22 @@ public class CmdsUnitTest {
         }
     }
 
-    @Test
-    public void passMkdirTest()
-    {
-        System.out.println("<---- PASS MKDIR TEST ---->");
-        ftp.setReplayMessageWaiting("Documents " + ServerMessage.CREAT_FOLDEXICTE_MSG);
-        ftp.setReplayCodeWaiting(ServerMessage.CREAT_FOLDKO_CODE);
-
-        cmds.passMkdir("Documents");
-
-        final File deletedFile=new File(ftp.getCurrentPath()+File.separator+"Nouveau Dossier-RomainBrahim");
-        if(deletedFile.exists()) deletedFile.delete();
-
-        ftp.setReplayMessageWaiting("Nouveau Dossier-RomainBrahim " + ServerMessage.CREAT_FOLDOK_MSG);
-        ftp.setReplayCodeWaiting(ServerMessage.CREAT_FOLDOK_CODE);
-        cmds.passMkdir("Nouveau Dossier-RomainBrahim");
-    }
+    // @Test
+    // public void passMkdirTest()
+    // {
+    //     System.out.println("<---- PASS MKDIR TEST ---->");
+    //     ftp.setReplayMessageWaiting("Documents " + ServerMessage.CREAT_FOLDEXICTE_MSG);
+    //     ftp.setReplayCodeWaiting(ServerMessage.CREAT_FOLDKO_CODE);
+    //
+    //     cmds.passMkdir("Documents");
+    //
+    //     final File deletedFile=new File(ftp.getCurrentPath()+File.separator+"Nouveau Dossier-RomainBrahim");
+    //     if(deletedFile.exists()) deletedFile.delete();
+    //
+    //     ftp.setReplayMessageWaiting("Nouveau Dossier-RomainBrahim " + ServerMessage.CREAT_FOLDOK_MSG);
+    //     ftp.setReplayCodeWaiting(ServerMessage.CREAT_FOLDOK_CODE);
+    //     cmds.passMkdir("Nouveau Dossier-RomainBrahim");
+    // }
 
 
     @Test
@@ -119,41 +119,41 @@ public class CmdsUnitTest {
         ftp.setReplayCodeWaiting(ServerMessage.PWD_OK_CODE);
         cmds.processPwd();
     }
+    //
+    // @Test
+    // public void processCWDTest()
+    // {
+    //     System.out.println("<---- PROCESS CWD TEST ---->");
+    //     ftp.setReplayCodeWaiting(ServerMessage.CWD_KO_CODE);
+    //     ftp.setReplayMessageWaiting("Aucun fichier ou dossier de ce type");
+    //
+    //     cmds.processCWD("m573ohgirz");
+    //     ftp.setReplayCodeWaiting(ServerMessage.CWD_KO_CODE);
+    //     ftp.setReplayMessageWaiting("Erreur d'acces");
+    //     cmds.processCWD("..");
+    //
+    //     ftp.setReplayMessageWaiting(ftp.getCurrentPath() + File.separator + "Documents");
+    //     ftp.setReplayCodeWaiting(ServerMessage.CWD_OK_CODE);
+    //     cmds.processCWD("Documents");
+    // }
 
-    @Test
-    public void processCWDTest()
-    {
-        System.out.println("<---- PROCESS CWD TEST ---->");
-        ftp.setReplayCodeWaiting(ServerMessage.CWD_KO_CODE);
-        ftp.setReplayMessageWaiting("Aucun fichier ou dossier de ce type");
-
-        cmds.processCWD("m573ohgirz");
-        ftp.setReplayCodeWaiting(ServerMessage.CWD_KO_CODE);
-        ftp.setReplayMessageWaiting("Erreur d'acces");
-        cmds.processCWD("..");
-
-        ftp.setReplayMessageWaiting(ftp.getCurrentPath() + File.separator + "Documents");
-        ftp.setReplayCodeWaiting(ServerMessage.CWD_OK_CODE);
-        cmds.processCWD("Documents");
-    }
-
-    @Test
-    public void processCdupTest()
-    {
-        System.out.println("<---- PROCESS CDUP TEST ---->");
-        ftp.setReplayCodeWaiting(ServerMessage.CDUP_KO_CODE);
-        ftp.setReplayMessageWaiting("Erreur d'acces");
-        cmds.processCWD("..");
-
-
-        ftp.setReplayMessageWaiting(ftp.getCurrentPath() + File.separator + "Documents");
-        ftp.setReplayCodeWaiting(ServerMessage.CWD_OK_CODE);
-        cmds.processCWD("Documents");
-        ftp.setReplayMessageWaiting(ServerMessage.CDUP_OK_MSG);
-        ftp.setReplayCodeWaiting(ServerMessage.CDUP_OK_CODE);
-        cmds.processCdup("..");
-
-    }
+    // @Test
+    // public void processCdupTest()
+    // {
+    //     System.out.println("<---- PROCESS CDUP TEST ---->");
+    //     ftp.setReplayCodeWaiting(ServerMessage.CDUP_KO_CODE);
+    //     ftp.setReplayMessageWaiting("Erreur d'acces");
+    //     cmds.processCWD("..");
+    //
+    //
+    //     ftp.setReplayMessageWaiting(ftp.getCurrentPath() + File.separator + "Documents");
+    //     ftp.setReplayCodeWaiting(ServerMessage.CWD_OK_CODE);
+    //     cmds.processCWD("Documents");
+    //     ftp.setReplayMessageWaiting(ServerMessage.CDUP_OK_MSG);
+    //     ftp.setReplayCodeWaiting(ServerMessage.CDUP_OK_CODE);
+    //     cmds.processCdup("..");
+    //
+    // }
 
 //    @Test
 //    public void processRMDTest()
